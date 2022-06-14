@@ -1,6 +1,6 @@
 .form_wrapper {
     background:#fff;
-    width:500px;
+    width:850px;
     max-width:100%;
     box-sizing:border-box;
     padding:15px;
@@ -12,11 +12,11 @@
     box-shadow:0 23px 4px -21px rgba(0, 0, 0, 0.9);
 }
 .form_container {
-    padding:15px;
+    padding:25px;
     border:1px dashed #ccc;
 }
 .form_wrapper h2 {
-    font-size:1.5em;
+    font-size:1.3em;
     line-height:1.5em;
     margin:0;
 }
@@ -97,14 +97,14 @@
 }
 .form_wrapper input[type="submit"] {
     background:#32C484;
-    height:50px;
+    height:80px;
     line-height:50px;
     width:100%;
     border:none;
     outline:none;
     cursor:pointer;
     color:#fff;
-    font-size:1.2em;
+    font-size:1.5em;
     -webkit-transition: all 0.30s ease-in-out;
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
