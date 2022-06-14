@@ -1,6 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
+    <meta charset="utf-8">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+    <script src="https://use.fontawesome.com/4ecc3dbb0b.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+
     <script src="script.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSH3GR1SSX"></script>
     <script>
@@ -14,33 +20,47 @@
 </head>
 
 <body>
+<div class="bg_img"></div>
+<div class="form_wrapper">
+    <div class="form_container">
+        <div class="title_container">
+            <img src="logo.png" width="200">
+            <h3>Send messages without add the number to your contact</h3>
+        </div>
 
-<img src="logo.png" width="200">
+        <div class="row clearfix">
+            <div>
+                <div class="textarea_field"><span><i aria-hidden="true" class="fa fa-phone"></i></span>
+                    <input type="tel" name="phone" id="phoneNumber"  placeholder="Phone number"/>
+                </div>
+            </div>
+        </div>
 
-<div>
 
-    <label for="phoneNumber">Phone number:</label><br>
-    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="enter phone number"><br><br>
-    <input type="submit" value="Start Conversation" onclick="cleanNumber()">
+        <div class="title_container">
+            <br>Allowed formats: <br><br>
+            <ul>
+                <li>+972-5xxxxxxxx</li>
+                <li>972-5xxxxxxxx</li>
+                <li>9725xxxxxxxx</li>
+                <li>05xxxxxxxx</li>
+                <li>05x-xxxxxxx</li>
+                <li>5x-xxxxxxx</li>
+                <li>5xxxxxxxx</li>
+            </ul>
+        </div>
 
+        <div class="title_container">
+        <input type="submit" value="Start Conversation" onclick="cleanNumber()">
+        </div>
 
-    <br><br><br>
+        <div class="last_item_container">
+            idogadiel@gmail.com
 
-    Allowed formats: <br>
-    <ul>
-        <li>+972-5xxxxxxxx</li>
-        <li>972-5xxxxxxxx</li>
-        <li>9725xxxxxxxx</li>
-        <li>05xxxxxxxx</li>
-        <li>05x-xxxxxxx</li>
-        <li>5x-xxxxxxx</li>
-        <li>5xxxxxxxx</li>
-    </ul>
+        </div>
 
-    <br><br>
-    idogadiel@gmail.com
+    </div>
+
 </div>
-
 </body>
 </html>
-
