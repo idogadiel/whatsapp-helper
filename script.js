@@ -1,21 +1,3 @@
-let deferredPrompt;
-window.addEventListener('beforeinstallprompt', (e) => {
-    deferredPrompt = e;
-});
-
-
-async function onInstall() {
-    if (deferredPrompt !== null) {
-        deferredPrompt.prompt();
-        const { outcome } = await deferredPrompt.userChoice;
-        if (outcome === 'accepted') {
-            deferredPrompt = null;
-        }
-    }
-}
-
-
-
 function cleanNumber() {
 
     const orderedPrefixes = ["+", "972", "-", "0"];
