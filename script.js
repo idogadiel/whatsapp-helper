@@ -1,3 +1,21 @@
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+    deferredPrompt = e;
+});
+
+
+async function onInstall() {
+    if (deferredPrompt !== null) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+            deferredPrompt = null;
+        }
+    }
+}
+
+
+
 function cleanNumber() {
 
     const orderedPrefixes = ["+", "972", "-", "0"];
@@ -13,7 +31,5 @@ function cleanNumber() {
         return currentPhoneNumber.replace(currentChar, "")
     }, phoneNumberWithoutPrefixes);
 
-    const url = "https://api.whatsapp.com/send?phone=972" + cleanedPhoneNumber;
-
-    window.location.href = url;
+    window.location.href = "https://api.whatsapp.com/send?phone=972" + cleanedPhoneNumber;
 }
